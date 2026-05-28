@@ -1,0 +1,56 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy: #080d1a;
+  --navy-mid: #0d1528;
+  --navy-light: #162040;
+  --blue: #1a6ef7;
+  --blue-light: #4d8fff;
+  --copper: #c07840;
+  --cream: #f2ead8;
+  --white: #ffffff;
+  --gray: #8899bb;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--navy);
+  color: var(--cream);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+* { cursor: none !important; }
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 300px 300px;
+}
+
+#root {
+  isolation: isolate;
+}
+
+::selection {
+  background: var(--blue);
+  color: var(--white);
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 2px; }

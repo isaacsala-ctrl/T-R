@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\ins36\\\\Desktop\\\\HVAC\" | Select-Object Name, @{Name=\"Type\"; Expression={if\\($_.PSIsContainer\\){\"Folder\"}else{\"File\"}}})"
+    ]
+  }
+}
